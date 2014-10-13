@@ -15,7 +15,7 @@ def colorize(sheet_content):
         from pygments.formatters import TerminalFormatter
 
     # if pygments can't load, just return the uncolorized text
-    except ImportError:
+    except ImportError, e:
         return sheet_content
 
     return highlight(sheet_content, BashLexer(), TerminalFormatter())

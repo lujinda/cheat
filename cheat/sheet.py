@@ -82,13 +82,14 @@ def is_writable(sheet):
 
 def path(sheet):
     """ Returns a sheet's filesystem path """
-    return sheets.get()[sheet]
+    return sheets.get()[sheet] 
 
-
-def read(sheet):
+def read(sheet, is_share=False):
     """ Returns the contents of the cheatsheet as a String """
     if not exists(sheet):
-        die('No cheatsheet found for ' + sheet)
+        print_func = is_share and warn or die
+        print_func('No cheatsheet found for ' + sheet)
+        return None
 
     with open (path(sheet)) as cheatfile:
           return cheatfile.read()

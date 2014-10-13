@@ -7,6 +7,8 @@ Usage:
   cheat -e <cheatsheet>
   cheat -s <keyword>
   cheat -l
+  cheat -L
+  cheat -S
   cheat -d
   cheat -v
 
@@ -26,6 +28,8 @@ Options:
   -d --directories  List directories on CHEATPATH
   -e --edit         Edit cheatsheet
   -l --list         List cheatsheets
+  -L --login        Login
+  -S --start_share        Start shared features
   -s --search       Search cheatsheets for <keyword>
   -v --version      Print the version number
 """
@@ -37,7 +41,6 @@ from docopt import docopt
 
 
 if __name__ == '__main__':
-    
     # parse the command-line options
     options = docopt(__doc__, version='cheat 2.1.0')
 
@@ -57,6 +60,13 @@ if __name__ == '__main__':
     elif options['--search']:
         print(colorize(sheets.search(options['<keyword>'])))
 
+    # login user
+    elif options['--login']:
+        verify.login_user()
+
+    # start_share features
+    elif options['--start_share']:
+        share.start_share()
     # print the cheatsheet
     else:
         print(colorize(sheet.read(options['<cheatsheet>'])))

@@ -81,7 +81,7 @@ def list():
     sheet_list = ''
     pad_length = max([len(x) for x in get().keys()]) + 4
     for sheet in sorted(get().items()):
-        sheet_list += sheet[0].ljust(pad_length) + sheet[1] + "\n"
+        sheet_list += sheet[0].ljust(pad_length) + sheet[1] + '\n'
     return sheet_list
 
 
