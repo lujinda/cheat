@@ -90,6 +90,31 @@ Otherwise, it will be created automatically.
 After you've customized your cheatsheets, I urge you to track `~/.cheat/` along
 with your [dotfiles][].
 
+Start networking features
+-------------------------
+cheat -S
+
+Update your sheet:
+
+    > update ls
+
+List your sheet:
+    
+    > list
+
+List sb. sheet:
+
+    > list sb.
+
+Read your sheet:
+    
+    > read ls
+
+Read sb. sheet:
+
+    > read sb. ls
+
+More features, enjoy looking
 
 Configuring
 -----------
@@ -151,3 +176,4 @@ Related Projects
 [3]:         http://errtheblog.com/posts/21-cheat
 [4]:         https://github.com/chrisallenlane/cheat/pull/77
 [tldr]:      https://github.com/tldr-pages/tldr
+
