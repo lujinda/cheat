@@ -2,7 +2,7 @@
 #coding:utf8
 # Author          : tuxpy
 # Email           : q8886888@qq.com
-# Last modified   : 2014-10-12 20:43:58
+# Last modified   : 2014-10-15 13:22:04
 # Filename        : verify.py
 # Description     : 
 
@@ -35,6 +35,7 @@ def user_pwd_is_true(user, pwd):
         request = urllib2.urlopen(req).read()
         return json.loads(request)
     except Exception,e :
+        die('Connection Failed')
         return None
 
 def login_user():

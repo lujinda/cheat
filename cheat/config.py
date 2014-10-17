@@ -2,7 +2,7 @@
 #coding:utf8
 # Author          : tuxpy
 # Email           : q8886888@qq.com
-# Last modified   : 2014-10-12 09:21:56
-# Filename        : config.py
+# Last modified   : 2014-10-17 12:02:17
+# Filename        : cheat/config.py
 # Description     : 
-host = 'http://localhost:1234'
+host = 'http://tuxpy.sinaapp.com'

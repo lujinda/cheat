@@ -6,8 +6,8 @@ def colorize(sheet_content):
     """ Colorizes cheatsheet content if so configured """
 
     # only colorize if so configured
-    if not 'CHEATCOLORS' in os.environ:
-        return sheet_content
+#    if not 'CHEATCOLORS' in os.environ:
+ #       return sheet_content
 
     try:
         from pygments import highlight
@@ -19,7 +19,6 @@ def colorize(sheet_content):
         return sheet_content
 
     return highlight(sheet_content, BashLexer(), TerminalFormatter())
-
 
 def die(message):
     """ Prints a message to stderr and then terminates """
@@ -44,13 +43,12 @@ def editor():
     else:
         return os.environ['EDITOR']
 
-
 def prompt_yes_or_no(question):
     """ Prompts the user with a yes-or-no question """
     print(question)
     return raw_input('[y/n] ') == 'y'
 
-
 def warn(message):
     """ Prints a message to stderr """
     print >> sys.stderr, (message)
+
